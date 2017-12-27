@@ -1,29 +1,32 @@
-  <div class="container text-banner">
-    <div class="row">
-      <div class="col-sm-4">{{ readFile "/content/_footer-right.md" | markdownify }}</div>
-      <div class="col-sm-8">{{ readFile "/content/_footer-left.md" | markdownify }}</div>
+<div class="container text-banner">
+  <div class="row">
+    <div class="col-sm-4">{{ readFile "/content/_footer-right.md" | markdownify }}</div>
+    <div class="col-sm-8">{{ readFile "/content/_footer-left.md" | markdownify }}</div>
+  </div>
+  <div class="row">
+    <div id="footer-legal" class="col-12">
+      © {{ .Now.Year }} {{ .Site.Params.LegalOrgName }}
     </div>
-    <div class="row">
-      <div id="footer-legal" class="col-12">
-        © {{ .Now.Year }} {{ .Site.Params.LegalOrgName }}
-      </div>
-      <div id="footer-legal" class="col-12">
-        <a href="mailto:{{ .Site.Params.ContactEmail }}"><i class="fas fa-envelope-square fa-2x"></i></a>
-        {{ if isset .Site.Params "facebookurl" }}
-          <a href="{{ .Site.Params.FacebookUrl }}"><i class="fab fa-facebook-square fa-2x"></i></a>
-        {{ end }}
-        {{ if isset .Site.Params "twitterurl" }}
-          <a href="{{ .Site.Params.TwitterUrl }}"><i class="fab fa-twitter-square fa-2x"></i></a>
-        {{ end }}
-        {{ if isset .Site.Params "meetupurl" }}
-          <a href="{{ .Site.Params.MeetupUrl }}"><i class="fab fa-meetup fa-2x"></i></a>
-        {{ end }}
-      </div>
+    <div id="footer-legal" class="col-12">
+      {{ .Site.Params.LegalOrgName }} is a registered charity in {{ .Site.Params.OrgLocations }}, Registered Charity Number {{ .Site.Params.registeredCharityNumber }}
+    </div>
+    <div id="footer-legal" class="col-12">
+      <a href="mailto:{{ .Site.Params.ContactEmail }}"><i class="fas fa-envelope-square fa-2x"></i></a>
+      {{ if isset .Site.Params "facebookurl" }}
+        <a href="{{ .Site.Params.FacebookUrl }}"><i class="fab fa-facebook-square fa-2x"></i></a>
+      {{ end }}
+      {{ if isset .Site.Params "twitterurl" }}
+        <a href="{{ .Site.Params.TwitterUrl }}"><i class="fab fa-twitter-square fa-2x"></i></a>
+      {{ end }}
+      {{ if isset .Site.Params "meetupurl" }}
+        <a href="{{ .Site.Params.MeetupUrl }}"><i class="fab fa-meetup fa-2x"></i></a>
+      {{ end }}
     </div>
   </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
 </html>
