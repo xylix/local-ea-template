@@ -3,9 +3,9 @@
 
 name = "EA Local"
 license = "MIT"
-licenselink = "https://github.com/henryaj/ea-local-theme/blob/master/LICENSE.md"
+licenselink = "https://github.com/rtcharity/local-ea-template/blob/master/LICENSE.md"
 description = "A minimalist theme for Effective Altruism local chapters to use"
-homepage = "https://github.com/henryaj/local-ea-template"
+homepage = "https://github.com/rtcharity/local-ea-template/blob/master/LICENSE.md"
 tags = []
 features = []
 min_version = "0.30.2"

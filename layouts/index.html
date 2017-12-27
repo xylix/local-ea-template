@@ -8,24 +8,54 @@
     <p>
       <a href="{{ .Site.Params.FirstButtonLink }}" class="btn btn-primary">{{ .Site.Params.FirstButtonText }}</a>
       <a href="{{ .Site.Params.SecondButtonLink }}" class="btn btn-secondary">{{ .Site.Params.SecondButtonText }}</a>
+      {{ if isset .Site.Params "meetupbuttonlink" }}
+        <a href="{{ .Site.Params.meetupButtonLink }}" class="btn btn-danger">{{ .Site.Params.meetupButtonText }}</a>
+      {{ end }}
     </p>
   </div>
 </section>
 
 <div class="container-fluid no-gutter">
   <div id="who-are-we" class="row banner-section" style="background-image:url('{{ .Site.BaseURL}}/img/city-banner.jpg')">
-    <div class="all-center"><span class="banner-section-text">Who are we?</span></div>
+    <div class="all-center"><span class="banner-section-text">{{ .Site.Params.topBannerText }}</span></div>
   </div>
 </div>
 
 <section class="text-center">
   <div class="container banner-section text-banner">
-    {{ .Content }}
+      <p class="lead">{{ .Site.Params.leadText }}</p>
+
+      <container>
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <h3>{{ .Site.Params.firstSectionHeader }}</h3>
+          </div>
+          <div class="col-lg-8">
+            <p>{{ .Site.Params.firstSectionText }}</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <h3>{{ .Site.Params.secondSectionHeader }}</h3>
+          </div>
+          <div class="col-lg-8">
+            <p>{{ .Site.Params.secondSectionText }}</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <h3>{{ .Site.Params.thirdSectionHeader }}</h3>
+          </div>
+          <div class="col-lg-8">
+            <p>{{ .Site.Params.thirdSectionText }}</p>
+          </div>
+        </div>
+      </container>
   </div>
 
 <div class="container-fluid no-gutter">
   <div id="ea-network-banner" class="row banner-section" style="background-image:url('{{ .Site.BaseURL}}/img/world-at-night.jpg')">
-    <div class="all-center"><span class="banner-section-text">A proud member of the effective altruism network</span></div>
+    <div class="all-center"><span class="banner-section-text">{{ .Site.Params.bottomBannerText }}</span></div>
   </div>
 </div>
 </section>
