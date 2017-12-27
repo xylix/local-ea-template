@@ -5,6 +5,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <li><a href="{{ .Site.BaseURL }}">{{ .Site.Params.navBarHome }}</a></li>
+            <li><a href="{{ .Site.BaseURL }}/about">{{ .Site.Params.navBarAboutUs }}</a></li>
+            <li><a href="{{ .Site.BaseURL }}/contact">{{ .Site.Params.navBarContactUs }}</a></li>
         </div>
       </div>
     </div>

@@ -1,22 +1,9 @@
 {{ partial "header.html" . }}
 
-<section class="jumbotron text-center">
-  <div class="container">
-    <img id="ea-main-logo" src="{{ .Site.BaseURL}}/img/ea_logo.png"/>
-    <h1 class="jumbotron-heading">{{ .Site.Params.FullTitle }}</h1>
-    <p class="lead text-muted">{{ .Site.Params.Strapline }}</p>
-    <p>
-      <a href="{{ .Site.Params.FirstButtonLink }}" class="btn btn-primary">{{ .Site.Params.FirstButtonText }}</a>
-      <a href="{{ .Site.Params.SecondButtonLink }}" class="btn btn-secondary">{{ .Site.Params.SecondButtonText }}</a>
-      {{ if isset .Site.Params "meetupbuttonlink" }}
-        <a href="{{ .Site.Params.meetupButtonLink }}" class="btn btn-danger">{{ .Site.Params.meetupButtonText }}</a>
-      {{ end }}
-    </p>
-  </div>
-</section>
+{{ partial "jumbotron.html" . }}
 
 <div class="container-fluid no-gutter">
-  <div id="who-are-we" class="row banner-section" style="background-image:url('{{ .Site.BaseURL}}/img/city-banner.jpg')">
+  <div id="top-banner" class="row banner-section" style="background-image:url('{{ .Site.BaseURL}}/img/top-banner.jpg')">
     <div class="all-center"><span class="banner-section-text">{{ .Site.Params.topBannerText }}</span></div>
   </div>
 </div>
@@ -31,7 +18,7 @@
             <h3>{{ .Site.Params.firstSectionHeader }}</h3>
           </div>
           <div class="col-lg-8">
-            <p>{{ .Site.Params.firstSectionText }}</p>
+            <p>{{ readFile "/content/homepage/_first_section_text.md" | markdownify }}</p>
           </div>
         </div>
         <div class="row align-items-center">
@@ -39,7 +26,7 @@
             <h3>{{ .Site.Params.secondSectionHeader }}</h3>
           </div>
           <div class="col-lg-8">
-            <p>{{ .Site.Params.secondSectionText }}</p>
+            <p>{{ readFile "/content/homepage/_second_section_text.md" | markdownify }}</p>
           </div>
         </div>
         <div class="row align-items-center">
@@ -47,7 +34,7 @@
             <h3>{{ .Site.Params.thirdSectionHeader }}</h3>
           </div>
           <div class="col-lg-8">
-            <p>{{ .Site.Params.thirdSectionText }}</p>
+            <p>{{ readFile "/content/homepage/_third_section_text.md" | markdownify }}</p>
           </div>
         </div>
       </container>
