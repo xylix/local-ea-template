@@ -8,8 +8,16 @@
           <ul class="nav navbar-nav">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{ .Site.BaseURL }}">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{ .Site.BaseURL }}">{{ .Site.Params.navBarHome }} <span class="sr-only">(current)</span></a>
                 </li>
+                <div class="dropdown">
+                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ .Site.BaseURL }}">{{ .Site.Params.navBarEffectiveAltruism }}<span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+                     <li><a href="{{ .Site.BaseURL }}/key-terms">{{ .Site.Params.navBarKeyTerms }}</a></li>
+                     <li><a href="{{ .Site.BaseURL }}/organizations">{{ .Site.Params.navBarOrganizations }}</a></li>
+                     <li><a href="{{ .Site.BaseURL }}/reading-material">{{ .Site.Params.navReadingMaterial }}</a></li>
+                   </ul>
+               </div>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ .Site.BaseURL }}/about">{{ .Site.Params.navBarAbout }} </a>
                 </li>
