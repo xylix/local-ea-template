@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
       <div class="container">
-        <a href="{{ .Site.BaseURL }}" class="navbar-brand">{{ .Site.Title | upper }}</a>
+        <a href="{{ "/" | absLangURL }}" class="navbar-brand">{{ .Site.Title | upper }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,23 +8,24 @@
           <ul class="nav navbar-nav">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{ .Site.BaseURL }}">{{ .Site.Params.navbar.Home }} <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{ "/" | absLangURL }}">{{ .Site.Params.navbar.Home }} <span class="sr-only">(current)</span></a>
                 </li>
                 <div class="dropdown">
                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ .Site.BaseURL }}">{{ .Site.Params.navbar.EffectiveAltruism }}<span class="caret"></span></a>
                    <ul class="dropdown-menu">
-                       <li><a href="{{ .Site.BaseURL }}/effective-altruism">{{ .Site.Params.navbar.AboutEA }}</a></li>
-                     <li><a href="{{ .Site.BaseURL }}/key-terms">{{ .Site.Params.navbar.KeyTerms }}</a></li>
-                     <li><a href="{{ .Site.BaseURL }}/organizations">{{ .Site.Params.navbar.Organizations }}</a></li>
-                     <li><a href="{{ .Site.BaseURL }}/reading-material">{{ .Site.Params.navbar.ReadingMaterial }}</a></li>
+                       <li><a href="{{ "effective-altruism" | absLangURL }}">{{ .Site.Params.navbar.AboutEA }}</a></li>
+                     <li><a href="{{ "key-terms" | absLangURL }}">{{ .Site.Params.navbar.KeyTerms }}</a></li>
+                     <li><a href="{{ "organizations" | absLangURL }}">{{ .Site.Params.navbar.Organizations }}</a></li>
+                     <li><a href="{{ "reading-material" | absLangURL }}">{{ .Site.Params.navbar.ReadingMaterial }}</a></li>
                    </ul>
                </div>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ .Site.BaseURL }}/faq">{{ .Site.Params.navbar.Faq }} </a>
+                    <a class="nav-link" href="{{ "faq" | absLangURL }}">{{ .Site.Params.navbar.Faq }} </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ .Site.BaseURL }}/contact">{{ .Site.Params.navbar.Contact }}</a>
+                    <a class="nav-link" href="{{ "contact" | absLangURL }}">{{ .Site.Params.navbar.Contact }}</a>
                 </li>
+                {{ partial "allLanguages.html" . }}
             </ul>
           </ul>
         </div>
