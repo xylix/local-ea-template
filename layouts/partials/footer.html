@@ -7,9 +7,12 @@
     <div id="footer-legal" class="col-12">
       © {{ .Now.Year }} {{ .Site.Params.groupinfo.LegalOrgName }}
     </div>
+  </div>
+  <div class="row">
     <div id="footer-legal" class="col-12">
       {{ .Site.Params.groupinfo.LegalOrgName }} is a registered charity in {{ .Site.Params.groupinfo.OrgLocations }}, Registered Charity Number {{ .Site.Params.groupinfo.registeredCharityNumber }}
     </div>
+  </div>
     <div id="footer-legal" class="col-12">
       <a href="mailto:{{ .Site.Params.ContactEmail }}"><i class="fas fa-envelope-square fa-2x"></i></a>
       {{ if isset .Site.Params.urls "facebookurl" }}
