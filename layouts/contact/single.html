@@ -22,11 +22,11 @@
 
               <br><br>
               <p>{{ .Site.Params.contactform.emailSubject }}:</p>
-              <input name="_subject"/>
+              <input type="text" name="_subject"/>
 
               <br><br>
               <p>{{ .Site.Params.contactform.emailMessage }}:</p>
-              <textarea rows=10 columns=30></textarea>
+              <textarea rows=10 columns=30 name="_message"></textarea>
 
               <br>
               <input type="submit" value="{{ .Site.Params.contactform.send }}">
