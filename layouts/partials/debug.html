@@ -1,7 +1,13 @@
 <section class="container">
-  / abs: {{ "/" | absLangURL }} <br>
-  / rel: {{ "/" | relLangURL }} <br>
+  / absLangURL: {{ "/" | absLangURL }} <br>
+  / relLangURL: {{ "/" | relLangURL }} <br>
+  / absURL: {{ "/" | absURL }} <br>
+  / relURL: {{ "/" | relURL }} <br>
   baseURL only: {{ .Site.BaseURL }} <br>
-  baseURL abs: {{ .Site.BaseURL | absLangURL }} <br>
-  faq abs: {{ "faq" | absLangURL }} <br>
+  baseURL absLangURL: {{ .Site.BaseURL | absLangURL }} <br>
+  baseURL relLangURL: {{ .Site.BaseURL | relLangURL }} <br>
+  baseURL absURL: {{ .Site.BaseURL | absURL }} <br>
+  baseURL relURL: {{ .Site.BaseURL | relURL }} <br>
+  faq absLangURL: {{ "faq" | absLangURL }} <br>
+  faq relLangURL: {{ "faq" | relLangURL }} <br>
 </section>
